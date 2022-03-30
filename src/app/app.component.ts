@@ -7,18 +7,20 @@ import { WeatherbitService } from './service/weatherbit.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'firstApp';
-  cites = ["Toronto", "Raleigh"];
-  city = "";
+  cites: string[] = ["Toronto", "Raleigh", "Ottawa", "Edmonton", "Calgary"];
+  city: string = "";
   weathers: any;
+  showLoader: boolean = false;
 
   constructor(private weatherbitService: WeatherbitService) { }
 
   ngOnInit(): void {
-    this.apply();
   }
+  
   apply() {
+    this.showLoader = true;
     this.weatherbitService.getByCityName(this.city).subscribe((res: any) => {
+      this.showLoader = false;
       this.weathers = res.data;
     })
   }

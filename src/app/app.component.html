@@ -1,4 +1,7 @@
 <!-- <router-outlet></router-outlet> -->
+showLoader {{showLoader}}
+<span *ngIf="showLoader" class="loading"></span>
+
 <div class="header-text">
     Weather Forrecast
     <button type="button" class="close" data-dismiss="modal" (click)="close()">&times;</button>
@@ -13,7 +16,6 @@
     </div>
     <div class="weather">
         <div class="weather-box mb-4" *ngFor="let weather of weathers">
-            <!-- <div class="date">{{weather.valid_date | date:'EEEE, MMMM d'}} </div> -->
             <div class="date">{{weather.valid_date | date:'EEEE'}} <br>{{weather.valid_date | date: 'MMM d'}} </div>
 
             <div class="img">

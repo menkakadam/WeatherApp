@@ -16,14 +16,22 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+  dropdownChange(){
+    if(this.city){
+      this.apply();
+    } else{
+      this.close();
+    }
+  }
   apply() {
     this.showLoader = true;
     this.weatherbitService.getByCityName(this.city).subscribe((res: any) => {
       this.showLoader = false;
       this.weathers = res.data;
-      //  only 5 dyas
-      this.weathers.length =5;
+      // if you want only 5 dyas show data then below use below code.
+      if (this.weathers.length > 5) {
+        this.weathers.length = 5;
+      }
     })
   }
 

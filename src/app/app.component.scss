@@ -5,12 +5,16 @@
     padding: 12px;
     color: #fff;
 }
-.lable-city, .city-dropdown{
+.lable-city{
     font-size: 28px;
     font-weight: bold;
 }
 .city-dropdown{
+    font-size: 28px;
     background: #e6e6e6;
+    border-radius: 0;
+    border: none;
+    border-right: 8px solid #e6e6e6;
 }
 .weather-box{
     text-align: center;
@@ -21,7 +25,6 @@
 .date{
     font-size: 18px;
     font-weight: bold;
-    max-width: 90px;
     margin: auto;
 }
 
@@ -30,8 +33,10 @@
 }
 .close{
     color: #fff;
-    font-size: 32px;
+    font-size: 47px;
     font-weight: normal;
+    margin-right: 7px;
+    opacity: 0.8;
 }
 .apply{
     border-radius: 0;

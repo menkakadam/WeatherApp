@@ -1,0 +1,53 @@
+.header-text{
+    background: #2a2a2a;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 12px;
+    color: #fff;
+}
+.lable-city, .city-dropdown{
+    font-size: 28px;
+    font-weight: bold;
+}
+.weather-box{
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+}
+
+.date{
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 90px;
+    margin: auto;
+}
+
+.temp{
+    font-size: 18px;
+}
+.close{
+    color: #fff;
+    font-size: 32px;
+    font-weight: normal;
+}
+.apply{
+    border-radius: 0;
+    font-size: 26px;
+    width: 170px;
+}
+@media all and (max-width: 900px){
+    .weather-box {
+        width: 33%;
+    }
+}
+
+@media all and (max-width: 600px){
+    .weather-box {
+        width: 50%;
+    }
+}
+@media all and (max-width: 420px){
+    .weather-box {
+        width: 100%;
+    }
+}

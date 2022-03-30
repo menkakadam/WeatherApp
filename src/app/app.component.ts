@@ -22,6 +22,8 @@ export class AppComponent implements OnInit {
     this.weatherbitService.getByCityName(this.city).subscribe((res: any) => {
       this.showLoader = false;
       this.weathers = res.data;
+      //  only 5 dyas
+      this.weathers.length =5;
     })
   }
 

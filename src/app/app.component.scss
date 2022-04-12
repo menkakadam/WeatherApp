@@ -39,6 +39,7 @@
     font-size: 40px;
     font-weight: normal;
     opacity: 0.8;
+    padding-top: 0.6rem;
 }
 .apply{
     border-radius: 0;
@@ -53,6 +54,9 @@
     padding: 0 20px;
 }
 .modal-footer{
+    border: none;
+}
+.modal-content{
     border: none;
 }
 @media all and (max-width: 900px){
